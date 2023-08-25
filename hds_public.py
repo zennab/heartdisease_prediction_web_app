@@ -16,7 +16,7 @@ import streamlit as st
 heart_disease_model = pickle.load(open('heart_disease_model.sav','rb'))
 
 # page title
-st.title(':green[HEART DISEASE PROGNOSIS]:hospital:')
+st.title(':hospital:green[HEART DISEASE PROGNOSIS]:hospital:')
     
 col1, col2, col3 = st.columns(3)
     
