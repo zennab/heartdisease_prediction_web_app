@@ -68,10 +68,10 @@ heart_diagnosis = ''
     # creating a button for Prediction
     
 if st.button('Heart Disease Test Result'):
- if not age or not sex or not cp or not trestbps or not chol or not fbs or not restecg or not thalach or not exang or not slope  or not thal:
+ if not age or not sex or not cp or not trestbps or not chol or not fbs or not restecg or not thalach or not exang or not slope or not ca or not thal:
      st.error("Please enter all the fields")  
  else:
-   heart_prediction = heart_disease_model.predict([[age, sex, cp, trestbps, chol, fbs, restecg,thalach,exang,oldpeak,slope,thal]])                          
+   heart_prediction = heart_disease_model.predict([[age, sex, cp, trestbps, chol, fbs, restecg,thalach,exang,oldpeak,slope,ca,thal]])                          
    if (heart_prediction[0] == 1):
       heart_diagnosis = 'The person is having heart disease'
    else:
